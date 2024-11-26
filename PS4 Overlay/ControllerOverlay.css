@@ -7,6 +7,14 @@
         margin-top: -280px;*/
 }
 
+.ds4.disconnected {
+    background: url(ps4-assets/disconnected.svg);
+}
+
+.ds4.disconnected div {
+    display: none;
+}
+
 .ds4 .triggers {
     width: 588px;
     height: 90px;
@@ -28,6 +36,36 @@
 .ds4 .trigger.right {
     float: right;
     background-position-x: 99px;
+}
+
+.ds4 .bumper {
+    width: 99px;
+    height: 23px;
+    background: url(ps4-assets/bumper.svg) no-repeat;
+    opacity: 0;
+}
+
+.ds4 .bumpers {
+    position: absolute;
+    width: 588px;
+    height: 23px;
+    left: 109px;
+    top: 94px;
+}
+
+.ds4 .bumper.pressed {
+    opacity: 1;
+}
+
+.ds4 .bumper.left {
+    /* -webkit-transform: rotateY(180deg); */
+    /* transform: rotateY(180deg); */
+    float: left;
+}
+
+.ds4 .bumper.right {
+    float: right;
+    transform: rotateY(180deg);
 }
 
 .ds4 .touchpad {
@@ -52,6 +90,59 @@
 
 .ds4 .meta.pressed {
     background: url(meta.png) no-repeat center;
+}
+
+/*Not needed, but I like keeping them here for posterity*/
+/*.ds4 .quadrant{
+position: absolute;
+background: url(ps4-assets/player-n.svg);
+height: 17px;
+width: 111px;
+top: 140px;
+left: 240px;
+}
+.ds4 .p0{
+background-position: 0 -6px;
+}
+.ds4 .p1{
+background-position: 0 -28px;
+}
+.ds4 .p2{
+background-position: 0 -49px;
+}
+.ds4 .p3{
+background-position: 0 -70px;
+}*/
+.ds4 .arrows {
+    position: absolute;
+    width: 352px;
+    height: 46px;
+    top: 142px;
+    left: 227px;
+}
+
+.ds4 .back, .ds4 .start {
+    background: url(ps4-assets/start.svg);
+    width: 28px;
+    height: 46px;
+    opacity: 0;
+}
+
+.ds4 .back.pressed, .ds4 .start.pressed {
+    /* background-position-y: -21px; */
+    /* margin-top: 2px; */
+    opacity: 1;
+}
+
+.ds4 .back {
+    float: left;
+    /* width: 28px; */
+}
+
+.ds4 .start {
+    float: right;
+    /* width: 28px; */
+    background-position: 28px 0;
 }
 
 .ds4 .abxy {
